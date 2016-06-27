@@ -10,8 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mac: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        let device = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        mac.text = device
         // Do any additional setup after loading the view, typically from a nib.
     }
 
